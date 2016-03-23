@@ -1,0 +1,17 @@
+1、nodejs 程序启动后，在修改程序的代码后需要不断的重启
+       Supervisor实现监测文件修改并自动重启应用的功能,从而避免大量重复的CTRL+C终止程序
+1）npm install supervisor -g
+2）supervisor app.js（替代node app.js）
+   那么用express4自动构建的项目用热启动就需要supervisor ./bin/www（npn start 或 node ./bin/www）
+
+
+2、forever是一个简单的命令式nodejs的守护进程，能够启动，停止，重启App应用
+1）安装forever
+   npm install -g forever
+2）启动
+   forever start app.js
+
+   程序就运行起来了，不需要一直不关闭命令行来支付程序运行。
+3）停止
+   forever stop  app.js
+
